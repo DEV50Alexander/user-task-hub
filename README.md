@@ -1,69 +1,113 @@
-# Welcome to your Lovable project
+# Proyecto de Gestión de Usuarios y Tareas
 
-## Project info
+Este proyecto es una aplicación full-stack que permite gestionar usuarios y tareas asignadas a esos usuarios. La aplicación consta de un backend desarrollado con NestJS y un frontend desarrollado con React.
 
-**URL**: https://lovable.dev/projects/dc8b7b8b-b26e-4030-8ef5-4a4912b27999
+## Tabla de Contenidos
 
-## How can I edit this code?
+- [Requisitos](#requisitos)
+- [Instalación](#instalación)
+  - [Backend](#backend)
+  - [Frontend](#frontend)
+- [Ejecución](#ejecución)
+- [Endpoints de la API](#endpoints-de-la-api)
+- [Interfaz Gráfica](#interfaz-gráfica)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
 
-There are several ways of editing your application.
+## Requisitos
 
-**Use Lovable**
+- Node.js (versión 14 o superior)
+- npm (versión 6 o superior)
+- MongoDB (o PostgreSQL)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/dc8b7b8b-b26e-4030-8ef5-4a4912b27999) and start prompting.
+## Instalación
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend
 
-**Use your preferred IDE**
+1. Clona el repositorio:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
+   cd tu-repositorio/backend
+   ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. Instala las dependencias:
 
-Follow these steps:
+   ```bash
+   npm install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. Configura la base de datos:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+   Crea un archivo `.env` en la raíz del proyecto backend y añade la configuración de la base de datos:
 
-# Step 3: Install the necessary dependencies.
-npm i
+   ```env
+   MONGO_URI=mongodb://localhost:27017/nest
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+4. Ejecuta el servidor:
+
+   ```bash
+   npm run start
+   ```
+
+### Frontend
+
+1. Navega al directorio del frontend:
+
+   ```bash
+   cd ../frontend
+   ```
+
+2. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+3. Ejecuta la aplicación:
+
+   ```bash
+   npm start
+   ```
+
+## Ejecución
+
+1. Asegúrate de que el servidor backend esté en ejecución.
+2. Ejecuta la aplicación frontend.
+3. Abre tu navegador y navega a `http://localhost:3000` para ver la aplicación en funcionamiento.
+
+## Endpoints de la API
+
+### Usuarios
+
+- `GET /users`: Obtener todos los usuarios.
+- `POST /users`: Crear un nuevo usuario.
+- `PUT /users/:id`: Actualizar un usuario existente.
+- `DELETE /users/:id`: Eliminar un usuario.
+
+### Tareas
+
+- `GET /tasks`: Obtener todas las tareas.
+- `POST /tasks`: Crear una nueva tarea.
+- `PUT /tasks/:id`: Actualizar una tarea existente.
+- `DELETE /tasks/:id`: Eliminar una tarea.
+
+## Interfaz Gráfica
+
+La interfaz gráfica permite:
+
+- Ver una lista de usuarios.
+- Ver los detalles de un usuario y las tareas asignadas a ese usuario.
+- Agregar, editar y eliminar usuarios y tareas.
+
+## Contribución
+
+Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request para cualquier mejora o corrección.
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/dc8b7b8b-b26e-4030-8ef5-4a4912b27999) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Este `README.md` proporciona una visión general del proyecto, instrucciones de instalación y ejecución, una descripción de los endpoints de la API, y detalles sobre la interfaz gráfica. También incluye secciones para contribuciones y licencia. 
